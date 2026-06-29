@@ -72,7 +72,9 @@ function Invoke-StudentPasswordAgent {
                         Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
                         $Request.password = $Password
                     }
-                    catch { }
+                    catch {
+                        Write-Warning "Failed to set password for user account $($Script:ADUser.DistinguishedName): $_"
+                    }
 
                     if (!$Request.password) {
                         try {
@@ -80,7 +82,9 @@ function Invoke-StudentPasswordAgent {
                             Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
                             $Request.password = $Password
                         }
-                        catch { }
+                        catch { 
+                            Write-Warning "Failed to set password for user account $($Script:ADUser.DistinguishedName): $_"
+                        }
                     }
 
                     if (!$Request.password) {
