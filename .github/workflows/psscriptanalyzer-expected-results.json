@@ -1,0 +1,17 @@
+[
+    {
+        "RuleName": "PSUseSingularNouns",
+        "ScriptName": "Get-ConnectorAuthSettings.ps1",
+        "Line": 28
+    },
+    {
+        "RuleName": "PSUseShouldProcessForStateChangingFunctions",
+        "ScriptName": "Start-ConnectorSyncSession.ps1",
+        "Line": 17
+    },
+    {
+        "RuleName": "PSUseSingularNouns",
+        "ScriptName": "Get-ConnectorSyncSessionOperationStatistics.ps1",
+        "Line": 14
+    }
+]
