@@ -4,7 +4,7 @@ Student password agent for Fortytwo Education.
 
 | Metadata | Information |
 | --- | --- |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Required modules | EntraIDAccessToken |
 | Author | Marius Solbakken Mellum |
 | Company name | Fortytwo Technologies AS |
@@ -243,7 +243,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ```
 Invoke-StudentPasswordAgent [[-IdentityAttribute] <String>] [[-PollingInterval] <Int32>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+ [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DESCRIPTION
@@ -259,6 +259,21 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ### PARAMETERS
+
+#### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 #### -IdentityAttribute
 
@@ -285,6 +300,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+#### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
