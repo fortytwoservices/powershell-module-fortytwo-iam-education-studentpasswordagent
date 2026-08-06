@@ -1,9 +1,9 @@
 function Invoke-StudentPasswordAgent {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess = $true)]
 
     param (
         [Parameter(Mandatory = $false)]
-        [string]$IdentityAttribute = "msDs-cloudExtensionAttribute20",
+        [string]$IdentityAttribute = "msDs-cloudExtensionAttribute19",
 
         [Parameter(Mandatory = $false)]
         [ValidateRange(1, 10)]
@@ -69,7 +69,9 @@ function Invoke-StudentPasswordAgent {
 
                     try {
                         $Password = $Request.generatedPasswords[0]
-                        Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                        if ($PSCmdlet.ShouldProcess($Script:ADUser.DistinguishedName, "Set password")) {
+                            Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                        }
                         $Request.password = $Password
                     }
                     catch {
@@ -79,7 +81,9 @@ function Invoke-StudentPasswordAgent {
                     if (!$Request.password) {
                         try {
                             $Password = $Request.generatedPasswords[1]
-                            Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                            if ($PSCmdlet.ShouldProcess($Script:ADUser.DistinguishedName, "Set password")) {
+                                Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                            }
                             $Request.password = $Password
                         }
                         catch { 
@@ -90,7 +94,9 @@ function Invoke-StudentPasswordAgent {
                     if (!$Request.password) {
                         try {
                             $Password = $Request.generatedPasswords[2]
-                            Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                            if ($PSCmdlet.ShouldProcess($Script:ADUser.DistinguishedName, "Set password")) {
+                                Set-ADAccountPassword -Identity $Script:ADUser.DistinguishedName -NewPassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) -Reset
+                            }
                             $Request.password = $Password
                         }
                         catch {
