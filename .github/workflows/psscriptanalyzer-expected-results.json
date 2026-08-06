@@ -2,16 +2,16 @@
     {
         "RuleName": "PSAvoidUsingConvertToSecureStringWithPlainText",
         "ScriptName": "Invoke-StudentPasswordAgent.ps1",
-        "Line": 72
+        "Line": 73
     },
     {
         "RuleName": "PSAvoidUsingConvertToSecureStringWithPlainText",
         "ScriptName": "Invoke-StudentPasswordAgent.ps1",
-        "Line": 82
+        "Line": 85
     },
     {
         "RuleName": "PSAvoidUsingConvertToSecureStringWithPlainText",
         "ScriptName": "Invoke-StudentPasswordAgent.ps1",
-        "Line": 93
+        "Line": 98
     }
 ]
