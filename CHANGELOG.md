@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/compare/v0.1.0...v0.2.0) (2026-08-06)
+
+
+### Features
+
+* Add whatif to Invoke-StudentPasswordAgent ([6f3f6ed](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/commit/6f3f6ed3c28002a1fa67c316e6a19d23574224e5))
+
 ## [0.1.0](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/compare/v0.0.1...v0.1.0) (2026-06-29)
 
 
