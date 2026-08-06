@@ -4,7 +4,7 @@ Student password agent for Fortytwo Education.
 
 | Metadata | Information |
 | --- | --- |
-| Version | 0.2.0 |
+| Version | 0.2.1 |
 | Required modules | EntraIDAccessToken |
 | Author | Marius Solbakken Mellum |
 | Company name | Fortytwo Technologies AS |
