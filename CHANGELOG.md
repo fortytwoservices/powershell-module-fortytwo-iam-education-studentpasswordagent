@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/compare/v0.2.0...v0.2.1) (2026-08-06)
+
+
+### Bug Fixes
+
+* Improve output and handle connectivity issues better ([1b3f0cf](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/commit/1b3f0cfb831d4157057ca77f054112a292bdb5c2))
+
 ## [0.2.0](https://github.com/fortytwoservices/powershell-module-fortytwo-iam-education-studentpasswordagent/compare/v0.1.0...v0.2.0) (2026-08-06)
 
 
