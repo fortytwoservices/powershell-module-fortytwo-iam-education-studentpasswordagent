@@ -4,7 +4,7 @@ function Get-StudentPasswordAgentPendingRequest {
 
     Process {
         try {
-            $_Result = Invoke-RestMethod -Uri "$($Script:APIRoot)studentpasswordrequests/pendingactivedirectoryagent" -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:AccessTokenProfile)
+            $_Result = Invoke-RestMethod -Uri "$($Script:APIRoot)studentpasswordrequests/pendingactivedirectoryagent" -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:AccessTokenProfile) -OperationTimeoutSeconds 30 -ConnectionTimeoutSeconds 30
             if($_Result.isSuccess) {
                 if($_Result.data) {
                     return $_Result.data
