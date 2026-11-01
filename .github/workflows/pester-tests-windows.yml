@@ -18,7 +18,7 @@ jobs:
     - name: Azure Login
       uses: azure/login@v3
       with:
-        client-id: ${{ vars.FORTYTWO_INTERNAL_POWERSHELL_PUSH_CLIENTID }}
+        client-id: ${{ vars.FORTYTWO_INTERNAL_POWERSHELL_PULL_CLIENTID }}
         tenant-id: ${{ vars.FORTYTWO_MANAGED_SERVICE_TENANTID }}
         allow-no-subscriptions: true
         enable-AzPSSession: true # Injects authentication into Az PowerShell module
